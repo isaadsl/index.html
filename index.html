@@ -1,53 +1,126 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Paisagens do Mundo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paisagens do Brasil</title>
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: Arial, sans-serif; background: #f0f8ff; color: #333; }
-    header, footer { background: #4682b4; color: #fff; text-align: center; padding: 2rem 1rem; }
-    header h1 { font-size: 2.5rem; margin-bottom: .5rem; }
-    main { padding: 2rem; }
-    .galeria {
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #a8edea, #fed6e3);
+      color: #2c3e50;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+      background: rgba(255 255 255 / 0.7);
+      box-shadow: 0 4px 8px rgb(44 62 80 / 0.15);
+      border-radius: 0 0 15px 15px;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1b4965;
+      text-shadow: 1px 1px 3px rgba(255 255 255 / 0.6);
+    }
+
+    main {
+      flex-grow: 1;
+      width: 90%;
+      max-width: 900px;
+      margin: 0 auto 2rem;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 2rem;
     }
-    .galeria img {
+
+    figure {
+      background: rgba(255 255 255 / 0.85);
+      padding: 1rem;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    figure:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    img {
       width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: transform .3s;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(27,73,101,0.3);
     }
-    .galeria img:hover { transform: scale(1.05); }
-    footer { padding: 1rem; margin-top: 2rem; }
+
+    figcaption {
+      margin-top: 0.8rem;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #204969;
+      text-align: center;
+      text-shadow: 1px 1px 2px rgba(255 255 255 / 0.8);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background: #1b4965;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 -4px 8px rgba(27,73,101,0.4);
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+    }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Paisagens do Mundo</h1>
-    <p>Descubra lugares incríveis através das imagens</p>
+    <h1>Paisagens Incríveis do Brasil</h1>
   </header>
+
   <main>
-  <figure>
-    <img src="imagens/images2.jpeg" alt="Rio de Janeiro - Vista do Pão de Açúcar" />
-    <figcaption>Rio de Janeiro - Vista do Pão de Açúcar</figcaption>
-  </figure>
+    <figure>
+      <img src="imagens/images3.jpeg" alt="Rio de Janeiro - Vista do Pão de Açúcar" />
+      <figcaption>Rio de Janeiro - Vista do Pão de Açúcar</figcaption>
+    </figure>
 
-  <figure>
-    <img src="imagens/images3.jpeg" alt="Lençóis Maranhenses - Dunas e lagoas" />
-    <figcaption>Lençóis Maranhenses - Dunas e lagoas</figcaption>
-  </figure>
+    <figure>
+      <img src="imagens/images2.jpeg" alt="Lençóis Maranhenses - Dunas e lagoas" />
+      <figcaption>Lençóis Maranhenses - Dunas e lagoas</figcaption>
+    </figure>
 
-  <figure>
-    <img src="imagens/images4.jpeg" alt="Fernando de Noronha - Praia do Sancho" />
-    <figcaption>Fernando de Noronha - Praia do Sancho</figcaption>
-  </figure>
+    <figure>
+      <img src="imagens/images4.jpeg" alt="Fernando de Noronha - Praia do Sancho" />
+      <figcaption>Fernando de Noronha - Praia do Sancho</figcaption>
+    </figure>
   </main>
+
   <footer>
-    <p>Feito por Isa 💙</p>
+    Feito por Isa 💙
   </footer>
+
 </body>
 </html>
